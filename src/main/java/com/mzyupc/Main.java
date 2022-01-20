@@ -24,13 +24,13 @@ public class Main {
             path = path + separator;
         }
 
-        String quantityString = System.getProperty("quantity", "1");
+        String quantityString = System.getProperty("q", "1");
         int quantity = Integer.parseInt(quantityString);
         if (quantity <= 0 || quantity > 100) {
             throw new RuntimeException("quantity out of range");
         }
 
-        String password = System.getProperty("password");
+        String password = System.getProperty("p");
         if (password == null || "".equals(password)) {
             throw new RuntimeException("password can not be empty");
         }
